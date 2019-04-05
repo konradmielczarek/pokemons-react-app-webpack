@@ -15,7 +15,7 @@ module.exports = merge(common, {
     hot: true,
     quiet: true
   },
-  // devtool: 'source-map',
+  devtool: 'source-map',
   optimization: {
     splitChunks: {
       chunks: 'all',
@@ -24,19 +24,16 @@ module.exports = merge(common, {
         default: false,
         react: {
           test: /[\\/]node_modules[\\/]react[\\/]/,
-          // name: 'vendor.react',
           priority: 20,
           enforce: true
         },
         reactDom: {
           test: /[\\/]node_modules[\\/]react-dom[\\/]/,
-          // name: 'vendor.react-dom',
           priority: 20,
           enforce: true
         },
         vendors: {
           test: /[\\/]node_modules[\\/]/,
-          // name: 'vendors',
           priority: 10,
           enforce: true,
           maxSize: 20000

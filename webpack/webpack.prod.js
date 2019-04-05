@@ -27,19 +27,16 @@ module.exports = merge(common, {
         default: false,
         react: {
           test: /[\\/]node_modules[\\/]react[\\/]/,
-          // name: 'vendor.react',
           priority: 20,
           enforce: true
         },
         reactDom: {
           test: /[\\/]node_modules[\\/]react-dom[\\/]/,
-          // name: 'vendor.react-dom',
           priority: 20,
           enforce: true
         },
         vendors: {
           test: /[\\/]node_modules[\\/]/,
-          // name: 'vendors',
           priority: 10,
           enforce: true,
           minSize: 10000,
